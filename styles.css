@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+/* Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header .nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.header .nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header .cart {
+  font-size: 1.2rem;
+  color: #fff;
+  /* เปลี่ยนสีของข้อความเป็นสีขาว */
+}
+
+/* Hero Section with Video */
+.hero {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Categories */
+.categories {
+  padding: 20px;
+  text-align: center;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category-item {
+  text-align: center;
+}
+
+
+/* Featured Products */
+.featured-products {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: px;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  /* กำหนดความกว้างของกรอบ */
+  height: 400px;
+  /* กำหนดความสูงของกรอบ */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* จัดให้เนื้อหาตำแหน่งเริ่มจากด้านบน */
+}
+
+
+.product-item img {
+  width: 100%;
+  /* รูปภาพขยายเต็มกรอบ */
+  height: 250px;
+  /* กำหนดความสูงให้เท่ากับกรอบ */
+  object-fit: cover;
+  /* ทำให้รูปครอบคลุมกรอบโดยไม่บิดเบี้ยว */
+  border-radius: 10px;
+}
+
+.product-item .btn-secondary {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+
+.highlight-all {
+
+  font-size: 4rem;
+  color: #50f479;
+
+}
+
+
+
+
+
+/* ปุ่ม */
+.toggle-label {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.7s ease;
+  text-align: center;
+  margin: 10px;
+}
+
+.toggle-label:hover {
+  background-color: #0056b3;
+}
+
+/* ซ่อน radio buttons */
+.toggle-radio {
+  display: none;
+}
+
+/* รูปภาพ */
+.image-content {
+  display: none;
+  margin-top: 10px;
+  text-align: center;
+  animation: fadeIn 0.7s ease-out;
+}
+
+/* แสดงรูปภาพสำหรับปุ่ม "All" */
+#all:checked~.content-all {
+  display: block;
+}
+
+/* แสดงรูปภาพเมื่อปุ่มเฉพาะถูกเลือก */
+#toggle1:checked~.content-1,
+#toggle2:checked~.content-2,
+#toggle3:checked~.content-3,
+#toggle4:checked~.content-4,
+#toggle5:checked~.content-5,
+#toggle6:checked~.content-6,
+#toggle7:checked~.content-7 {
+  display: block;
+}
+
+
+
+/* รูปภาพ */
+.image-content img {
+  max-width: 20%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+h2 {
+  text-align: center;
+  /* จัดตำแหน่งข้อความให้อยู่กลาง */
+
+}
+
+.about {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  max-width: 100%;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Layout for about items */
+.about-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* ระยะห่างระหว่างรูปกับข้อความ */
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 1200px;
+  /* เพิ่มพื้นที่ของคอนเทนเนอร์ */
+  margin: 0 auto;
+}
+
+.about-item img {
+  width: 100%;
+  max-width: 500px;
+  /* ขนาดสูงสุดของรูป */
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+
+}
+
+.about-item p {
+  flex: 1;
+  /* ขยายข้อความให้ครอบคลุมพื้นที่ที่เหลือ */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0 auto;
+  /* จัดให้อยู่กลาง */
+}
+
+/* Reverse layout for alternating sections */
+.about-item.reverse {
+  flex-direction: row-reverse;
+  /* พลิกตำแหน่งรูปและข้อความ */
+  text-align: right;
+  /* จัดข้อความให้อยู่ด้านขวา */
+}
